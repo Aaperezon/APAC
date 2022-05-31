@@ -1,3 +1,7 @@
+<?php
+include "./services/helper.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +11,6 @@
     <title>APAC</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/main.js"></script>
 </head>
 <body>
     <?php
@@ -18,19 +21,23 @@
                 <div class="col">
 
                     <?php
-                        $information = array(1,1,1,1,1,1,1,1,1,1,1);
+                        $information = json_decode(Get("services/readregistro.php",[]), true);
+                        // $information = array(1,1,1,1,1,1,1,1,1,1,1);
                         $index = 0;
                         $cards_per_row = 5;
                         foreach($information as $clave => $valor ){
                             if($index % $cards_per_row == 0){
                                 echo('<div class="row">');
                             }
+                            echo ($valor[14]!="1") ? "bg-danger" : "bg-success";
                             echo('
-                            <div class="card" style="width: 12rem; margin:2%;">
+                            
+                            <div class="card " style="width: 12rem; margin:2%;">
                                 <img src="./src/img/ejemplo.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Grillo</h5>
-                                    <p class="card-text">< Estas son algunas caracteristicas del perrito ></p>
+                                    <input hidden type="text" name="id" value="'.$valor[0].'" >
+                                    <h5 class="card-title">'.$valor[4].'</h5>
+                                    <p class="card-text"> '.$valor[9].' </p>
                                     <center>
                                         <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_editar" >Editar</a>
                                     </center>
@@ -51,7 +58,6 @@
 
                 </div>
         </div>
-
         <?php
             include './modal_editar.php';
             include './modal_agregar.php';
@@ -78,8 +84,10 @@
     </div>
  -->
 
-<   /div>
 
     
 </body>
+<footer>
+<script src="./js/main.js"></script>
+</footer>
 </html>

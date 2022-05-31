@@ -73,14 +73,14 @@
                         <div class="row">
                             <div class="row">
                                 <div class="col">
-                                    <input type="checkbox" class="form-check-input" id="if_esterilizado_id">
+                                    <input type="checkbox" class="form-check-input" id="esterilizado_id_checkbox_edit">
                                     <label class="form-check-label" >Esterilizado</label>
-                                    <input hidden id="esterilizado_id" class="form-control" type="date" />
+                                    <input hidden id="esterilizado_id_edit" class="form-control" type="date" />
                                 </div>
                                 <div class="col">
-                                    <input type="checkbox" class="form-check-input" id="if_adoptado_id">
+                                    <input type="checkbox" class="form-check-input" id="adoptado_id_checkbox_edit">
                                     <label class="form-check-label" >Adoptado</label>
-                                    <input hidden id="adoptado_id" class="form-control" type="date" />
+                                    <input hidden id="adoptado_id_edit" class="form-control" type="date" />
                                 </div>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                                 <div class="col">
                                     <div class="row">
                                         <div class="col">
-                                            <input type="checkbox" class="form-check-input" id="if_vacuna_id">
+                                            <input type="checkbox" class="form-check-input" id="vacuna_id_checkbox_edit">
                                             <label class="form-check-label" >Vacuna</label>
                                         </div>
                                         <div class="col">
@@ -100,7 +100,7 @@
                                         </div>
 
                                     </div>
-                                    <div hidden id="vacuna_id">
+                                    <div hidden id="vacuna_id_edit">
                                         <div class="row">
                                             <div class="col-7">
                                                 <input class="form-control" type="text" placeholder="Nombre de vacuna"/>
@@ -119,7 +119,7 @@
                                 <div class="col">
                                     <div class="row">
                                         <div class="col">
-                                            <input type="checkbox" class="form-check-input" id="if_operacion_id">
+                                            <input type="checkbox" class="form-check-input" id="operacion_id_checkbox_edit">
                                             <label class="form-check-label" >Operacion</label>
                                         </div>
                                         <div class="col">
@@ -128,7 +128,7 @@
                                         <div class="col-5">
                                         </div>
                                     </div>
-                                    <div hidden id="operacion_id">
+                                    <div hidden id="operacion_id_edit">
                                         <div class="row">
                                             <div class="col-7">
                                                 <input class="form-control" type="text" placeholder="Nombre de operacion"/>
